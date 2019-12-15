@@ -13,9 +13,13 @@
 	height: 100%;
 }
 
+#nameGame{
+	transition: all 2s linear;
+}
+
 .header {
 	position: absolute;
-	top: 8vh;
+	top: 2vh;
 	left: 0;
 	width: 100%;
 	text-align: center;
@@ -51,9 +55,10 @@
 
 .score {
 	width: 100%;
-	margin: 2em 0 0;
+	margin: 0.666em 0 0;
 	text-align: center;
 	white-space: nowrap;
+	transition: all 2s linear;
 }
 
 .score__content {

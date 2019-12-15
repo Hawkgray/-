@@ -928,11 +928,48 @@ function updatePlane(){
 
 function showReplay(){
   replayMessage.style.display="block";
+  nameGame.style.opacity = 0;
+  nameGame.style.display = 'block';
+  nameGame.style.opacity = 1;
+  setTimeout(function(){
+		score.style.margin = '0.666em 0 0';
+	}, 2000);
+  instructions.style.display="block";
+  instructions.style.opacity = 1;
 }
 
 function hideReplay(){
   replayMessage.style.display="none";
+  sayHi();
+  setTimeout(helpOff, 3000);
 }
+
+function demo0012(){
+	score.style.transition = 'all 1s linear';
+	score.style.margin = '0.666em 0 0';
+}
+
+function sayHi(){
+	nameGame.style.opacity=0;
+	setTimeout(function(){
+		score.style.transition = 'all 0s linear';
+		score.style.margin = '5.5em 0 0';
+		nameGame.style.display = 'none';
+		setTimeout(demo0012,10);
+	}, 2000);
+}
+
+
+
+function helpOff(){
+	instructions.style.opacity=0;
+	setTimeout(function(){
+		instructions.style.display = 'none';
+	}, 2000);
+}
+
+setTimeout(sayHi, 6000);
+setTimeout(helpOff, 5000);
 
 function normalize(v,vmin,vmax,tmin, tmax){
   var nv = Math.max(Math.min(v,vmax), vmin);
@@ -951,6 +988,9 @@ function init(event){
   fieldDistance = document.getElementById("distValue");
   energyBar = document.getElementById("energyBar");
   replayMessage = document.getElementById("replayMessage");
+  nameGame = document.getElementById("nameGame");
+  instructions = document.getElementById("instructions");
+  score = document.getElementById("score");
   fieldLevel = document.getElementById("levelValue");
   levelCircle = document.getElementById("levelCircleStroke");
 

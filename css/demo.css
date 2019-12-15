@@ -136,7 +136,7 @@ body #cdawrap { top: auto; right: auto; bottom: 12px; left: 12px; border: 1px so
 	.partisan__title::before { font-size: 0.25em; }
 }
 @media screen and (max-width:60em) {
-	.game-holder .message--instructions { bottom: 5.5em; }
+	.game-holder .message--instructions { bottom: 1.5em; transition: all 2s linear;}
 	.partisan { width: 100%; height: auto; padding: 1.75em 0.5em 0.5em; text-align: center; background: rgba(190, 215, 48, 0.5); }
 	.partisan__bg { display: none; }
 	.partisan__img { display: none; }
